@@ -1,11 +1,7 @@
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        {% if question.question_text%}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-        {% else %}
-        <li>Sem Perguntas</li>
-        {% endif %}
     {% endfor %}
     </ul>
 {% else %}
